@@ -1,0 +1,51 @@
+{
+  "name": "@starter/example",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "devDependencies": {},
+  "scripts": {
+    "build": "wireit",
+    "test": "wireit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cefn/starter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cefn/starter/issues"
+  },
+  "homepage": "https://github.com/cefn/starter#readme",
+  "wireit": {
+    "build": {
+      "command": "tsc --project tsconfig.build.json",
+      "files": [
+        "src/**/*.ts",
+        "src/**/*.tsx"
+      ],
+      "output": [
+        "dist"
+      ]
+    },
+    "test": {
+      "dependencies": [
+        "build"
+      ],
+      "command": "jest",
+      "files": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "test/**/*.ts"
+      ],
+      "output": []
+    }
+  }
+}
