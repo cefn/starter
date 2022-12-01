@@ -1,3 +1,6 @@
+# CH Don't commit wireit caches
+.wireit
+
 # Logs
 logs
 *.log
