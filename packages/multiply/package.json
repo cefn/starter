@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
-  "module": "./src",
+  "module": "./src/index.mjs",
   "main": "./dist/index.cjs",
   "types": "./dist/cjs/index.d.js",
   "exports": {
