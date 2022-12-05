@@ -4,9 +4,24 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
-  "main": "dist/index.js",
+  "module": "src",
+  "main": "src/index.cjs",
+  "types": "dist/types/index.d.js",
+  "exports":{
+    ".": {
+      "import": {
+        "default":"./src",
+        "types": "./dist/types/index.d.js"
+      },
+      "require": {
+        "default":"./src/index.cjs",
+        "types": "./dist/types/index.d.js"
+      }
+    }
+  },
   "files": [
     "dist",
+    "src",
     "README.md"
   ],
   "devDependencies": {},

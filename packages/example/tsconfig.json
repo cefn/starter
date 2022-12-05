@@ -1,7 +1,18 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "../../tsconfig.json",
-  "include": ["src/**/*"],
-  "compilerOptions": {
-    "outDir": "./dist"
-  }
+  "references": [
+    {
+      "path": "./tsconfig/esm.json"
+    },
+    {
+      "path": "./tsconfig/cjs.json"
+    },
+    {
+      "path": "./tsconfig/vitest.json"
+    },
+    {
+      "path": "./tsconfig/dts.json"
+    }
+  ]
 }
