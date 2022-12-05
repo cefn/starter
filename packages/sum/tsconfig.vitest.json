@@ -1,11 +1,10 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "../../tsconfig.json",
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "test/**/*"],
   "compilerOptions": {
     "composite": true,
-    "emitDeclarationOnly": true,
-    "module": "ESNext",
-    "outDir": "./dist/dts"
+    "noEmit": true,
+    "types": ["vitest/globals"]
   }
 }

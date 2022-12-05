@@ -1,0 +1,71 @@
+{
+  "name": "@starter/sum",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "module": "./src",
+  "main": "./dist/index.cjs",
+  "types": "./dist/types/index.d.js",
+  "exports": {
+    ".": {
+      "import": {
+        "default": "./src/index.mjs",
+        "types": "./dist/esm/index.d.js"
+      },
+      "require": {
+        "default": "./dist/index.cjs",
+        "types": "./dist/cjs/index.d.js"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
+  "devDependencies": {},
+  "scripts": {
+    "build": "wireit",
+    "test": "wireit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cefn/starter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cefn/starter/issues"
+  },
+  "homepage": "https://github.com/cefn/starter#readme",
+  "wireit": {
+    "build": {
+      "command": "tsc --build",
+      "files": [
+        "src/**/*.ts",
+        "src/**/*.tsx"
+      ],
+      "output": [
+        "dist"
+      ]
+    },
+    "test": {
+      "dependencies": [
+        "build"
+      ],
+      "command": "vitest run --globals",
+      "files": [
+        "tsconfig.test.json",
+        "vite.config.ts",
+        "vitest.config.ts",
+        "jest.config.cjs",
+        "../../jest.config.base.cjs",
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "test/**/*.ts"
+      ],
+      "output": []
+    }
+  }
+}

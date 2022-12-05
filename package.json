@@ -15,7 +15,8 @@
   "wireit": {
     "test": {
       "dependencies": [
-        "./packages/example:test"
+        "./packages/sum:test",
+        "./packages/multiply:test"
       ]
     },
     "lint": {
@@ -36,7 +37,7 @@
     }
   },
   "workspaces": [
-    "packages/example"
+    "packages/*"
   ],
   "devDependencies": {
     "@changesets/cli": "^2.25.2",
