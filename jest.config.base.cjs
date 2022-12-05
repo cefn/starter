@@ -16,4 +16,7 @@ module.exports = {
   projects: ["<rootDir>"],
   coverageDirectory: "<rootDir>/coverage/",
   preset: "ts-jest",
+  moduleNameMapper: {
+    "@starter/([^/]+)": "<rootDir>../../packages/$1/src",
+  },
 };
