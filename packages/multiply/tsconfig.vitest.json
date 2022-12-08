@@ -1,9 +1,7 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "../../tsconfig.json",
+  "extends": "./tsconfig.json",
   "include": ["src/**/*", "test/**/*"],
   "compilerOptions": {
-    "composite": true,
     "noEmit": true,
     "types": ["vitest/globals"]
   }

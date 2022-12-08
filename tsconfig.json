@@ -103,5 +103,15 @@
     "paths": {
       "@starter/*": ["packages/*/src"]
     }
-  }
+  },
+  "references": [
+    {
+      "path": "./packages/sum/tsconfig.json"
+    },
+    {
+      "path": "./packages/multiply/tsconfig.json"
+    }
+  ],
+  "files": [],
+  "include": []
 }

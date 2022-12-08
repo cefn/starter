@@ -18,7 +18,8 @@
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module",
-    "project": ["tsconfig.json"]
+    "project": ["tsconfig.json"],
+    "EXPERIMENTAL_useSourceOfProjectReferenceRedirect": true
   },
   "plugins": ["react", "jest"],
   "ignorePatterns": ["*/*/dist"],
